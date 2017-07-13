@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Luxo</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-list>
+        <ion-card *ngFor="let carro of carros" (click)="viewCarro($event, carro)">
+            <img src="{{carro.urlFoto}}" />
+            <ion-card-content>
+                <ion-card-title>{{carro.nome}}</ion-card-title>
+                <p>{{carro.desc}}</p>
+            </ion-card-content>
+        </ion-card>
+    </ion-list>
+</ion-content>

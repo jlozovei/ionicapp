@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-navbar>
+  	<button *ngIf="!carro"><ion-icon name="arrow-left-c"></ion-icon></button>
+    <ion-title>{{carro.nome}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+	<ion-card>
+	  <img src="{{carro.urlFoto}}"/>
+	  <ion-card-content>
+	    <ion-card-title *ngIf="carro">
+	      {{carro.nome}}
+	      </ion-card-title>
+	    <p *ngIf="carro">{{carro.desc}}</p>
+	  </ion-card-content>
+	</ion-card>
+
+</ion-content>
