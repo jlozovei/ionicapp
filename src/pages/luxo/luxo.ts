@@ -12,14 +12,14 @@ import { CarroServiceProvider } from '../../providers/carro-service/carro-servic
 export class LuxoPage {
 
   carros: Array<{id: number, nome: string, desc: string, urlFoto: string}>
-  
+
   constructor(public navCtrl: NavController, public carroServiceProvider: CarroServiceProvider) {
     this.carroServiceProvider.loadLuxo()
     .then(data => {
       this.carros = data;
     });
   }
-  
+
   viewCarro(event, item) {
     this.navCtrl.push(DetalhesPage, {
       item: item
