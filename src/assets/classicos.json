@@ -1,25 +1,4 @@
-import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
-import { DetalhesPage } from '../detalhes/detalhes';
-
-import { CarroServiceProvider } from '../../providers/carro-service/carro-service';
-
-@Component({
-  selector: 'page-classicos',
-  templateUrl: 'classicos.html',
-  providers: [CarroServiceProvider]
-})
-export class ClassicosPage {
-
-  carros: Array<{id: number, tipo: string, nome: string, desc: string, urlFoto: string, urlVideo: string, latitude: string, longitude: string}>
-  
-  constructor(public navCtrl: NavController, public carroServiceProvider: CarroServiceProvider) {
-    /* this.carroServiceProvider.loadClassicos()
-    .then(data => {
-      this.carros = data;
-    }); */
-
-    this.carros = [
+[
   {
     "id": 1,
     "tipo": "classicos",
@@ -121,6 +100,12 @@ export class ClassicosPage {
     "longitude": "-46.653156"
   },
   {
+    "id": 63,
+    "tipo": "classicos",
+    "nome": "Chevrolet Onix",
+    "urlFoto": "https://s3-sa-east-1.amazonaws.com/livetouch-temp/livrows/car-bg.png"
+  },
+  {
     "id": 72,
     "tipo": "classicos",
     "nome": "Fusca",
@@ -131,12 +116,3 @@ export class ClassicosPage {
     "longitude": ""
   }
 ]
-  }
-  
-  viewCarro(event, item) {
-    this.navCtrl.push(DetalhesPage, {
-      item: item
-    });
-  }
-
-}

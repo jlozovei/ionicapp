@@ -14,7 +14,7 @@ export class CarroServiceProvider {
 
 	loadLuxo() {
 		if (this.carros) {
-		return Promise.resolve(this.carros);
+			return Promise.resolve(this.carros);
 		}
 
 		return new Promise(resolve => {
@@ -29,7 +29,7 @@ export class CarroServiceProvider {
 
 	loadEsportivos() {
 		if (this.carros) {
-		return Promise.resolve(this.carros);
+			return Promise.resolve(this.carros);
 		}
 
 		return new Promise(resolve => {
@@ -44,7 +44,7 @@ export class CarroServiceProvider {
 
 	loadClassicos() {
 		if (this.carros) {
-		return Promise.resolve(this.carros);
+			return Promise.resolve(this.carros);
 		}
 
 		return new Promise(resolve => {
