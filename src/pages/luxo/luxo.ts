@@ -11,7 +11,7 @@ import { CarroServiceProvider } from '../../providers/carro-service/carro-servic
 })
 export class LuxoPage {
 
-  carros: Array<{id: number, nome: string, desc: string, urlFoto: string}>
+  carros: Array<{id: number, tipo: string, nome: string, desc: string, urlFoto: string, urlVideo: string, latitude: string, longitude: string}>
 
   constructor(public navCtrl: NavController, public carroServiceProvider: CarroServiceProvider) {
     this.carroServiceProvider.loadLuxo()
