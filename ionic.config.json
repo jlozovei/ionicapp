@@ -1,5 +1,8 @@
 {
   "name": "carrosIonic",
   "app_id": "b98e1078",
-  "type": "ionic-angular"
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
 }
